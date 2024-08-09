@@ -2,7 +2,7 @@
 const pc = require('picocolors')
 
 console.log("Hola mundo");
-//Cambio el texto en consola a color verde
+//Cambio el texto en consola a color
 console.log(
     pc.green(`How are ${pc.italic(`you`)} doing?`)
 )
