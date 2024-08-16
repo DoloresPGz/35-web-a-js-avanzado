@@ -49,4 +49,22 @@ async function ejecutarOperaciones(){
 
 
 //Paso 3: Llamar a la función principal
- ejecutarOperaciones()
+ //ejecutarOperaciones()
+
+
+ 
+(async function (){
+     //Paso 2: Definir los bloques try/catch para capturar cualquier error que pueda ocurrir
+     try{
+        //Paso 3: Ejecutar los procesos asíncronos utilizando await
+        //Usamos "await" para esperar el resultado de cada operación antes de pasar al siguiente paso.
+        //Esto hace que el código se ejecute de manera secuencial, tal como si fuera síncrono.
+        const resultado1 = await operacion1(5)
+        const resultado2 = await operacion2(resultado1)
+        const resultadoFinal = await operacion3(resultado2)
+        console.log("El resultado final es: ", resultadoFinal);
+        
+    }catch (error){
+        console.error("Hubo un error:", error)
+    }
+})() //Función ejecutada usando la expresión IIFE (Immediatly invoked function expression)
