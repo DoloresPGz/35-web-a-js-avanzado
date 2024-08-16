@@ -15,4 +15,4 @@ function consultarPokemon(nombrePokemon) {
 
 
 
-consultarPokemon("charizar")
+consultarPokemon("charizard")
