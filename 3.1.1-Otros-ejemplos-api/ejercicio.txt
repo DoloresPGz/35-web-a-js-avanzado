@@ -1,0 +1,8 @@
+Consultar la api https://rickandmortyapi.com/ el endpoint para obtener un solo personaje (puede ser por su ID o por su nombre),
+y desplegar la siguiente información:
+- nombre
+- género
+- lista de capítulos donde aparece (opcional)
+- imagen del personaje
+
+Desplegar la información usando los recursos de html y css
