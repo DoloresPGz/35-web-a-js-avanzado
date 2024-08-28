@@ -29,7 +29,7 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
                 
             // });
             let results = arrayRes.filter(pokemon =>{
-                return pokemon.name.includes(pokemonName.toLocaleLowerCase())
+                return pokemon.name.includes(pokemonName.toLowerCase())
             })
 
             results.forEach(pokemon =>{
