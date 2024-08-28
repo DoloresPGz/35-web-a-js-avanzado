@@ -1,4 +1,4 @@
-fetch("https://pokeapi.co/api/v2/pokemon?limit=15&offset=0")
+fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
     .then(res => res.json())
     .then(data => {
         let urlArray = []//url de los pokemones
@@ -19,15 +19,24 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=15&offset=0")
     })
     .then(
         arrayRes => {
-            arrayRes.forEach(pokemon => {
-                console.log(pokemon.name);
-                console.log(pokemon.weight);
-                console.log(pokemon.sprites.front_default);
-                console.log("-----------------------------------");
+            let pokemonName = "Char"
+            // arrayRes.forEach(pokemon => {
+            //     console.log(pokemon.name);
+            //     console.log(pokemon.weight);
+            //     console.log(pokemon.sprites.front_default);
+            //     console.log("-----------------------------------");
                 
                 
-            });
+            // });
+            let results = arrayRes.filter(pokemon =>{
+                return pokemon.name.includes(pokemonName.toLocaleLowerCase())
+            })
 
+            results.forEach(pokemon =>{
+                console.log(pokemon.name);
+                
+            })
+            
 
         }
     )
